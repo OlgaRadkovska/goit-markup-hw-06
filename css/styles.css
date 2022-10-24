@@ -566,8 +566,12 @@ img {
 }
 
 .footer-block {
-  /* column-gap: 70px; */
   align-items: baseline;
+}
+
+.footer-contacts {
+  margin-right: 70px;
+  flex-grow: 1;
 }
 
 .footer .logo {
@@ -580,7 +584,6 @@ img {
 
 .address {
   margin-top: 20px;
-  margin-right: 70px;
   font-style: normal;
 }
 
@@ -628,11 +631,10 @@ img {
 /* ==================FOOTER MAILING FORM================= */
 
 .mailing-form {
-  position: relative;
   display: flex;
+  align-items: flex-end;
+  gap: 12px;
   width: 570px;
-  height: 86px;
-  align-items: baseline;
   margin-left: 93px;
 }
 
@@ -654,17 +656,15 @@ img {
   background-color: transparent;
   padding-left: 16px;
   padding-right: 16px;
-  margin-right: 12px;
 
   font-size: 16px;
   color: #fff;
 }
 
 .mailing-form-submit {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 10px 62px 10px 32px;
+  display: flex;
+  align-items: center;
+  padding: 10px 32px;
   border: none;
   border-radius: 4px;
 
@@ -687,10 +687,7 @@ img {
 }
 
 .mailing-close-icon {
-  position: absolute;
-  top: 50%;
-  right: 28px;
-  transform: translateY(-50%);
+  margin-left: 10px;
 }
 
 .mailing-form-input::placeholder {
@@ -793,6 +790,10 @@ img {
   margin-bottom: 10px;
 }
 
+.modal-form-field:nth-of-type(4) {
+  margin-bottom: 20px;
+}
+
 .modal-form-input-desc {
   display: block;
   font-size: 12px;
@@ -823,6 +824,7 @@ img {
 }
 
 .modal-form-message {
+  display: block;
   width: 100%;
   height: 120px;
   resize: none;
@@ -860,12 +862,12 @@ img {
 .modal-form-checkbox-wrapper {
   display: flex;
   align-items: center;
-  margin-left: 12px;
+  justify-content: center;
   margin-bottom: 30px;
 }
 
 .modal-form-custom-checkbox {
-  border: 1px solid var(--main-color);
+  border: 2px solid var(--main-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
   padding: 1px;
@@ -882,8 +884,9 @@ img {
 }
 
 .modal-form-checkbox:checked + .modal-form-custom-checkbox {
+  border: transparent;
   background-color: var(--accent-color);
-  border-color: var(--accent-color);
+  /* border-color: var(--accent-color); */
 }
 
 .modal-form-checkbox:checked
